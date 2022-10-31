@@ -1,0 +1,11 @@
+source_root      = 'original'
+destination_root = 'translation'
+#out_rootが空の場合
+output_root      = '.'
+
+[[profiles]]
+source			= '%source_root%\evergreen_l_english.yml'
+destination		= '%destination_root%\evergreen_l_english.yml'
+output			= '%output_root%\evergreen_l_english.tmx'
+output_is_file	= true
+

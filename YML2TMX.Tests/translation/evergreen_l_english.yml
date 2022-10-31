@@ -1,0 +1,5 @@
+﻿l_english:
+ # Evergreen Trait
+ trait_evergreen:0 "常緑"
+ trait_evergreen_desc:0 "このキャラクターは外見を若く保っている。"
+ trait_evergreen_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip]は外見を若く保っている。"

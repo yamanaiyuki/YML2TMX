@@ -1,0 +1,10 @@
+source_root      = 'original'
+destination_root = 'translation'
+#out_rootにディレクトリ指定のみ
+output_root      = 'evergreen'
+
+[[profiles]]
+source      = '%source_root%\evergreen_l_english.yml'
+destination	= '%destination_root%\evergreen_l_english.yml'
+output      = '%output_root%'
+

@@ -1,0 +1,62 @@
+# 終了前にポーズする
+# デフォルト: false
+#pause_when_finish = false
+
+# 翻訳メモリの編集者名を変更したい場合は指定できる
+# デフォルト: yml2tmx
+#nameid = 'yml2tmx'
+
+# source_root destination_root output_root を指定しておくと
+# source destination output にて使用可能
+# また%userprofile%も使用できる(C:\Users\(ユーザー名)に置き変わる)
+#
+# 何も指定したいくない場合は「.」を入れておけば事故が防げるでしょう
+#
+source_root			= 'C:\Program Files (x86)\Steam\steamapps\common\Crusader Kings III\game\localization\english'
+destination_root	= 'C:\Program Files (x86)\Steam\steamapps\workshop\content\1158310\2217567218\localization\english'
+output_root			= '%userprofile%\Documents\Paradox Interactive\CrusaderKings3T'
+
+[[profiles]]
+
+# 指定書式に変換する
+# tm→tmx翻訳メモリ(tmxファイル)
+# glossary→用語集(txtファイル)
+# デフォルト: tm
+#format = 'tm'
+
+# 原文ファイルのルートパス
+# ファイル名が指定されていない場合はワイルドカードとみなして再帰ループ
+source = '%source_root%'
+
+# 訳文ファイルのルートパス
+# ファイル名が指定されていない場合は原文ファイルで指定されているものと同じとみなす
+destination = '%destination_root%'
+
+# 出力先のルートパス
+# ファイル名が指定されていない場合は原文ファイルで指定されているものと同じとみなす
+output = '%output_root%\tm\auto'
+
+# 出力先のファイル/フォルダ判定
+# 出力先のoutputがフォルダ名ではなくファイル名の場合はtrueを指定する
+# デフォルト: false
+#output_is_file = false
+
+# 除外したいファイル名がある場合は指定
+excludes = [
+  'dlc_ep1_schemes_l_english.yml',
+  'dlc_fp2_triggers.yml',
+]
+
+[[profiles]]
+format = 'glossary'
+source		= '%source_root%\titles_l_english.yml'
+destination	= '%destination_root%\titles_l_english.yml'
+output		= '%output_root%\glossary\titles_l_english.txt'
+output_is_file = true
+
+[[profiles]]
+format = 'glossary'
+source		= '%source_root%\titles_cultural_names_l_english.yml'
+destination = '%destination_root%\titles_cultural_names_l_english.yml'
+output		= '%output_root%\glossary\titles_cultural_names_l_english.txt'
+output_is_file = true

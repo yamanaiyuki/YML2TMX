@@ -1,0 +1,5 @@
+source_root      = 'C:\Program Files (x86)\Steam\steamapps\common\Crusader Kings III\game\localization\english'
+destination_root = 'C:\Program Files (x86)\Steam\steamapps\workshop\content\1158310\2217567218\localization\english'
+output_root      = '%userprofile%\Documents\Paradox Interactive\CrusaderKings3T'
+
+#profilesはない

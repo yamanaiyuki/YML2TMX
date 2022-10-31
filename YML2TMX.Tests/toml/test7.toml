@@ -1,0 +1,13 @@
+source_root      = 'original'
+destination_root = 'translation'
+output_root      = 'auto'
+
+[[profiles]]
+format = 'tm'
+source		= '%source_root%'
+destination	= '%destination_root%'
+output		= '%output_root%'
+
+excludes = [
+  'interactions_l_english.yml',
+]

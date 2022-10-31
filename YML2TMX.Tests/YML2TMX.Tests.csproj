@@ -1,0 +1,97 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="build-test3.toml" />
+    <None Remove="build-test4.toml" />
+    <None Remove="build-test5.toml" />
+    <None Remove="build-test6.toml" />
+    <None Remove="build-test7.toml" />
+    <None Remove="build.toml" />
+    <None Remove="original\evergreen_l_english.yml" />
+    <None Remove="original\interactions_l_english.yml" />
+    <None Remove="toml\build-test8.toml" />
+    <None Remove="toml\convert.toml" />
+    <None Remove="toml\test3.toml" />
+    <None Remove="toml\test4.toml" />
+    <None Remove="toml\test5.toml" />
+    <None Remove="toml\test6.toml" />
+    <None Remove="toml\test7.toml" />
+    <None Remove="toml\test8.toml" />
+    <None Remove="translation\evergreen_l_english.yml" />
+    <None Remove="translation\interactions_l_english.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="original\evergreen_l_english.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="original\interactions_l_english.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="toml\convert.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="toml\test3.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="toml\test4.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="toml\test5.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="toml\test6.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="toml\test7.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="toml\test8.toml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="translation\evergreen_l_english.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="translation\interactions_l_english.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YML2TMX\YML2TMX.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="evergreen_l_english.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="evergreen_l_japanese.yml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
