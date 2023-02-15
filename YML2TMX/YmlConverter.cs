@@ -35,6 +35,9 @@ public class YmlConverter
         string[] lines2 = File.ReadAllLines(infile2);
         TUItem.AddTranslate(items, lines2);
 
+        // 訳文が空、もしくは空白で埋められてた
+        items = TUItem.SkipEmptyTranslation(items);
+
         if (skipsame)
         {
             // 原文と同一な訳文は追加しない

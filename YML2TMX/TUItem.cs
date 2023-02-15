@@ -135,6 +135,9 @@ public class TUItem
         }
     }
 
+    // Translateが空行やスペースの場合は削除する
+    public static List<TUItem> SkipEmptyTranslation(List<TUItem> list) => list.Where(x => !string.IsNullOrWhiteSpace(x.Translate)).ToList();
+
     // OriginalとTranslateが同じものだったら削除する
     // Trimや空行は判定しない
     public static List<TUItem> SkipSameTranslation(List<TUItem> list) => list.Where(x => x.Original != x.Translate).ToList();
